@@ -12,6 +12,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
 import PersonIcon from "@mui/icons-material/Person";
 import GoogleIcon from "@mui/icons-material/Google";
+import logo from "../../../public/t2g.png"
 
 const RegistrationHero: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -36,7 +37,7 @@ const RegistrationHero: React.FC = () => {
           gap: 4,
         }}
       >
-        {/* Left side content */}
+        
         <Box sx={{ flex: 1, pl: { md: 6 } }}>
           <Typography variant="h2" fontWeight="bold" gutterBottom>
             Build Your Future with Us
@@ -47,14 +48,14 @@ const RegistrationHero: React.FC = () => {
           </Typography>
           <Box sx={{ mt: 4 }}>
             <img
-              src="../../../public/t2g.png"
+              src={logo}
               alt="hero"
               style={{ width: "80%", maxWidth: 400 }}
             />
           </Box>
         </Box>
 
-        {/* Right side form */}
+        
         <Box
           sx={{
             flex: 1,
@@ -140,11 +141,11 @@ const RegistrationHero: React.FC = () => {
                 variant="contained"
                 fullWidth
                 sx={{
-                  background: "#2f3cc9",
+                  background: "red",
                   borderRadius: 3,
                   py: 1.5,
                   fontWeight: "bold",
-                  "&:hover": { background: "#1e2bbf" },
+                  "&:hover": { background: "blue" },
                 }}
               >
                 Sign Up
