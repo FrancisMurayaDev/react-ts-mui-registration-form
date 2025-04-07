@@ -13,9 +13,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
 import PersonIcon from "@mui/icons-material/Person";
 import GoogleIcon from "@mui/icons-material/Google";
-// import { Grid3x3 } from "@mui/icons-material";
 
-const RegistrationHero = () => {
+
+const RegistrationHero: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,6 +30,7 @@ const RegistrationHero = () => {
   return (
     <Box sx={{ height: "100vh", backgroundColor: "white", p: 4 }}>
       <Grid container sx={{ height: "100%" }} alignItems="center" spacing={4}>
+        
       
         <Grid item xs={12} md={6}>
           <Box sx={{ pl: 6 }}>
@@ -49,8 +50,13 @@ const RegistrationHero = () => {
           </Box>
         </Grid>
 
-        
-        <Grid item xs={12} md={6} display="flex" justifyContent="center">
+        {/* Right Side - Form */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
           <Paper
             elevation={6}
             sx={{
