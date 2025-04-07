@@ -13,6 +13,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
 import PersonIcon from "@mui/icons-material/Person";
 import GoogleIcon from "@mui/icons-material/Google";
+import { Grid } from "@mui/material";
 
 
 const RegistrationHero: React.FC = () => {
@@ -50,7 +51,6 @@ const RegistrationHero: React.FC = () => {
           </Box>
         </Grid>
 
-        {/* Right Side - Form */}
         <Grid
           item
           xs={12}
