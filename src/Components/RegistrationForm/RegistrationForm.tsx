@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Box,
-  Grid,
   Typography,
   TextField,
   Button,
@@ -13,8 +12,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
 import PersonIcon from "@mui/icons-material/Person";
 import GoogleIcon from "@mui/icons-material/Google";
-
-
 
 const RegistrationHero: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -30,32 +27,41 @@ const RegistrationHero: React.FC = () => {
 
   return (
     <Box sx={{ height: "100vh", backgroundColor: "white", p: 4 }}>
-      <Grid container sx={{ height: "100%" }} alignItems="center" spacing={4}>
-        
-      
-        <Grid item xs={12} md={6}>
-          <Box sx={{ pl: 6 }}>
-            <Typography variant="h2" fontWeight="bold" gutterBottom>
-              Build Your Future with Us
-            </Typography>
-            <Typography variant="body1" sx={{ fontSize: 18, color: "#555" }}>
-              Join a community of creators, learners, and doers. It all starts with one step — sign up today and unlock the possibilities.
-            </Typography>
-            <Box sx={{ mt: 4 }}>
-              <img
-                src="../../../public/t2g.png"
-                alt="hero"
-                style={{ width: "80%", maxWidth: 400 }}
-              />
-            </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          height: "100%",
+          alignItems: "center",
+          gap: 4,
+        }}
+      >
+        {/* Left side content */}
+        <Box sx={{ flex: 1, pl: { md: 6 } }}>
+          <Typography variant="h2" fontWeight="bold" gutterBottom>
+            Build Your Future with Us
+          </Typography>
+          <Typography variant="body1" sx={{ fontSize: 18, color: "#555" }}>
+            Join a community of creators, learners, and doers. It all starts
+            with one step — sign up today and unlock the possibilities.
+          </Typography>
+          <Box sx={{ mt: 4 }}>
+            <img
+              src="../../../public/t2g.png"
+              alt="hero"
+              style={{ width: "80%", maxWidth: 400 }}
+            />
           </Box>
-        </Grid>
+        </Box>
 
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: "flex", justifyContent: "center" }}
+        {/* Right side form */}
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+          }}
         >
           <Paper
             elevation={6}
@@ -67,7 +73,12 @@ const RegistrationHero: React.FC = () => {
               backgroundColor: "white",
             }}
           >
-            <Typography variant="h5" fontWeight="bold" mb={3} textAlign="center">
+            <Typography
+              variant="h5"
+              fontWeight="bold"
+              mb={3}
+              textAlign="center"
+            >
               Create Your Account
             </Typography>
 
@@ -149,8 +160,8 @@ const RegistrationHero: React.FC = () => {
               </Box>
             </Box>
           </Paper>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };
